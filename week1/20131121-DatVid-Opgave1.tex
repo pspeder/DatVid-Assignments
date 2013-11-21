@@ -180,15 +180,15 @@
     \fancyhf{}
     \fancyhead[R]{\today \\ \leftmark}
     \fancyhead[L]{Paw S. Pedersen \\ Andreas Dall Løfgren \\ Arinbjørn Brandsson}
-    \fancyhead[C]{Datalogiens Videnskab \\ \bfseries Gruppeaflevering 1} % IDEA: This could be edited to be
-                                                %       a macro displating  the
-                                                %       current (sub)section.
-    \fancyfoot[C]{\footnotesize Side \thepage\ af \pageref{LastPage}} % Display a Page y of x at the
-                                                %  bottom of page.
+    \fancyhead[C]{Datalogiens Videnskab \\ \bfseries Gruppeaflevering 1}
+        % IDEA: This could be edited to be
+        %       a macro displating  the
+        %       current (sub)section.
+    % Display a "Page X of y"
+    \fancyfoot[C]{\footnotesize Side \thepage\ af \pageref{LastPage}}
 }
 
-\fancypagestyle{psty:toc}
-{
+\fancypagestyle{psty:toc}{
     \renewcommand{\headheight}{0pt}
     \renewcommand{\textheight}{620pt}
     \renewcommand{\footrulewidth}{0pt}
@@ -286,11 +286,11 @@ igennem de udleverede tekster. Eventuelle ændringer i hans holdning, har vi
 naturligvis gjort opmærksom på, hvor passende i forhold til den pågældende
 påstand.
 
-\section{Naurs synspunkter}
-\include{resources/naur}
+%\section{Naurs synspunkter}
+\include{includes/naur}
 
-\section{Validering}
-\include{}
+%\section{Validering}
+\include{includes/validation}
 
 \end{document}
 %-- END DOCUMENT }}}1 --%
