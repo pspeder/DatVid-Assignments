@@ -1,4 +1,4 @@
-\documentclass[11pt,a4paper,portrait,oneside,final]{article}
+\documentclass[11pt,a4paper,oneside,final]{article}
 
 %-- PACKAGE IMPORTS {{{1 --%
 
@@ -6,7 +6,7 @@
                                         %  tex-file.
 \usepackage[T1]{fontenc}                % Encoding of the characters in the
                                         %  output file (pdf)
-\usepackage[british,english,danish]{babel} % The language(s) used in the document.
+\usepackage[danish,english]{babel} % The language(s) used in the document.
                                         %  Used, amongst other things, to let
                                         %  the interpreter know where to split
                                         %  words.
@@ -174,6 +174,31 @@
 % end language specific listing styles }}}3
 %---- end syntax highlighting }}}2 ----%
 
+%---- fancyhdr styles ----% {{{2 
+
+\fancypagestyle{psty:regular}{
+    \fancyhf{}
+    \fancyhead[R]{\today \\ \leftmark}
+    \fancyhead[L]{Paw S. Pedersen \\ Andreas Dall Løfgren \\ Arinbjørn Brandsson}
+    \fancyhead[C]{Datalogiens Videnskab \\ \bfseries Gruppeaflevering 1} % IDEA: This could be edited to be
+                                                %       a macro displating  the
+                                                %       current (sub)section.
+    \fancyfoot[C]{\footnotesize Side \thepage\ af \pageref{LastPage}} % Display a Page y of x at the
+                                                %  bottom of page.
+}
+
+\fancypagestyle{psty:toc}
+{
+    \renewcommand{\headheight}{0pt}
+    \renewcommand{\textheight}{620pt}
+    \renewcommand{\footrulewidth}{0pt}
+    \renewcommand{\headrulewidth}{0pt}
+    \fancyhf{}
+    \fancyfoot[C]{\footnotesize Side \thepage\ af \pageref{LastPage}}
+}
+
+%---- }}}2 ----%
+
 %---- macros ----% {{{2
 % These macros are used to declare a piece of text either a "TODO" or "Remark:"
 %  item, marked in red and a shade of grey, respectively, to stand out from the
@@ -196,7 +221,7 @@
 %-- DOCUMENT PROPERTIES {{{1 --%
 
 % The options here define the layout of the document.
-\pagestyle{fancy}   % There are several 'standard styles' that can be used
+\pagestyle{psty:regular}   % There are several 'standard styles' that can be used
                     %  here, including fancyplain, which is often the one
                     %  illustrated on various websites.
 \addtolength{\headheight}{\baselineskip}            % Since fancy adds a top
@@ -210,32 +235,30 @@
     \LARGE{Datalogiens Videnskabsteori}\\
     \huge{Gruppeaflevering 1}
     \author{ % List all authors here.
-        \begin{minipage}{0.35\textwidth}
+        \begin{minipage}{0.30\textwidth}
             \centering
             Andreas Dall Løfgren\\
             \texttt{100992}
         \end{minipage}
         \vspace{5pt}
         \and
-        \begin{minipage}{0.35\textwidth}
+        \begin{minipage}{0.30\textwidth}
             \centering
             Paw Saabye Pedersen\\
             \texttt{110788}
+        \end{minipage}
+        \vspace{5pt}
+        \and
+        \begin{minipage}{0.35\textwidth}
+            \centering
+            Arinbjørn Brandsson\\
+            \texttt{280292}
         \end{minipage}
     }
     \setcounter{page}{0}
     \date{\today}
 }
 % }}}2
-%---- header and footer {{{2 ----%
-\rhead{\today \\ \leftmark}
-\lhead{Paw S. Pedersen \\ Andreas Dall Løfgren}
-\chead{Datalogiens Videnskab \\ \bfseries Gruppeaflevering 1} % IDEA: This could be edited to be
-                                             %       a macro displating  the
-                                             %       current (sub)section.
-\cfoot{Page \thepage\ of \pageref{LastPage}} % Display a Page y of x at the
-                                             %  bottom of page.
-%---- end header and footer }}}2 ----%
 %---- line spacing {{{2 ----%
 %\singlespacing
 %\onehalfspacing
@@ -250,6 +273,22 @@
 \maketitle
 \thispagestyle{empty}
 \newpage
+
+\thispagestyle{psty:toc}
+\tableofcontents
+\newpage
+
+\section{Introduktion}
+Vi har valgt at sammenfatte, de synspunkter Peter Naur fremsætter i alle tre
+tekster under ét punkt, og argumentere herudfra.\\
+Dette er gjort ud fra dén betragtning, at Naurs holdninger forbliver statiske
+igennem de udleverede tekster. Eventuelle ændringer i hans holdning, har vi
+naturligvis gjort opmærksom på, hvor passende i forhold til den pågældende
+påstand.
+
+\section{Naurs synspunkter}
+
+
 
 
 \end{document}
