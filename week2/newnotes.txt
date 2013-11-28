@@ -23,6 +23,10 @@ Redegørelse for artiklens punkter og vores holdning hertil
             og data kan søge efter mønstre i de data, der beskriver
             vores omverden - samlet gennem lang tid (bl.a. hos
             Google).
+    - Den datamængde vi har nu gør, at vi kan bruge statistiske
+      analyser af dette kæmpe datasæt (datamining), istedet for at skulle
+      formulere en teori først. Det gør os i stand til at FINDE
+      hypoteser/teorier.
 
     - Tror mere på data end (hvad han kalder) modeller.
         - Kan ikke se idéen med først at forme sig en model over hvordan han vil
