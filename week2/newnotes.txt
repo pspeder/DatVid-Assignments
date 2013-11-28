@@ -1,0 +1,20 @@
+================================================================================
+                           Notes :: The End of Theory
+================================================================================
+
+Introduktion af artikel
+    - Forfatter: Editor in chief på hjemmesiden
+    - Oversigt over hovedpunkterne så læseren ved hvor vi skal hen
+    - Hvad er en model
+        - I videnskaben: En systematisk repræsentation af et fænomen i
+          virkeligheden.
+        - Anderson siger: Det er en måde at danne sig sin hypotese og en
+          forståelse for hvordan data skal bruges.
+
+Redegørelse for artiklens punkter og vores holdning hertil
+    - Tror mere på data end (hvad han kalder) modeller.
+        - Kan ikke se idéen med først at forme sig en model over hvordan han vil
+          benytte sine testdata (altså sin hypotese).
+
+Diskussion
+    - 
