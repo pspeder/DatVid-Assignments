@@ -64,3 +64,4 @@
 - Evt. historisk perspektiv:
     - Hvordan kommer man videre uden data? - kan man tage
       højde for det i Anderson's metode.
+
