@@ -14,10 +14,10 @@ Introduktion af artikel
 Redegørelse for artiklens punkter og vores holdning hertil
     - Modeller
         - Alle modeller er inkorrekte - George Box, og Anderson giver ham ret.
-        Hvorfor har det givet mening at bruge dem?
-        -   Det var det eneste redskab, vi havde der tilnærmelsesvis
+        - Hvorfor har det givet mening at bruge dem?
+          - Det var det eneste redskab, vi havde der tilnærmelsesvis
             besrkev verden på en konsistent måde.
-        -   Det står i kontrast til den måde vi nu med vores værktøjer
+          - Det står i kontrast til den måde vi nu med vores værktøjer
             og data kan søge efter mønstre i de data, der beskriver
             vores omverden - samlet gennem lang tid (bl.a. hos
             Google).
@@ -25,6 +25,11 @@ Redegørelse for artiklens punkter og vores holdning hertil
     - Tror mere på data end (hvad han kalder) modeller.
         - Kan ikke se idéen med først at forme sig en model over hvordan han vil
           benytte sine testdata (altså sin hypotese).
+
+    - Fokus ligger ikke på hvorfor ting gør/er som de er, men
+      bare _at_ de er.
+      (Realisme/anti-realisme)
+    - 
 
 Diskussion
     - 
