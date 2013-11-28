@@ -12,6 +12,15 @@ Introduktion af artikel
           forståelse for hvordan data skal bruges.
 
 Redegørelse for artiklens punkter og vores holdning hertil
+    - Modeller
+        Hvorfor har det givet mening at bruge dem?
+        -   Det var det eneste redskab, vi havde der tilnærmelsesvis
+            besrkev verden på en konsistent måde.
+        -   Det står i kontrast til den måde vi nu med vores værktøjer
+            og data kan søge efter mønstre i de data, der beskriver
+            vores omverden - samlet gennem lang tid (bl.a. hos
+            Google).
+
     - Tror mere på data end (hvad han kalder) modeller.
         - Kan ikke se idéen med først at forme sig en model over hvordan han vil
           benytte sine testdata (altså sin hypotese).
