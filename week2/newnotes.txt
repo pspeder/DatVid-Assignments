@@ -4,7 +4,7 @@
 
 Introduktion af artikel
 =======================
-    - Oversigt over hovedpunkterne så læseren ved hvor vi skal hen
+    - Oversigt over fremlæggelsen
     - Hvad er en model
         - I videnskaben: En systematisk repræsentation af et fænomen i
           virkeligheden.
