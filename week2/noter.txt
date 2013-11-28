@@ -6,6 +6,7 @@
 
 - Alle modeller er inkorrekte - George Box, og han giver
   ham ret.
+  Modeller i Andersons forståelse = Hypotesedannelse
   Hvorfor har det givet mening at bruge dem?
 -   Det var dey eneste redskab, vi havde der tilnærmelsesvis
     besrkev verden på en konsistent måde.
@@ -24,7 +25,8 @@
 
     (vi - der er bekymret om videnskabsteori - synes det er
      vigtigt at vi har vores kildekritik i orden. Det må
-     være nærmest umuligt at være selektiv med sine kilder).
+     være nærmest umuligt at være selektiv med sine kilder i
+     Andersons 'model').
 
 - Den datamængde vi har nu gør, at vi kan bruge statiske
   analyser af dette kæmpe datasæt, istedet for at skulle
@@ -59,9 +61,12 @@
   kan den ikke.
     - Kan man benytte de samme marketingstrategier som
       Google Ads benytter nu udenfor internettets verden.
-    - 
+        Man mangler forståelsen for hvad det er der
+        interesserer mennesker.
 
 - Evt. historisk perspektiv:
     - Hvordan kommer man videre uden data? - kan man tage
       højde for det i Anderson's metode.
+        Eksempler:
+            Tyngdekraften
 
