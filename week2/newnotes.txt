@@ -50,10 +50,10 @@ Redegørelse for artiklens punkter og vores holdning hertil
         
 Diskussion
 ==========
-        - I hvilke tilfælde kan denne tankegang benyttes og hvilke
-          kan den ikke?
-            - Kan man benytte de samme marketingstrategier som
-              Google Ads benytter nu udenfor internettets verden?
-       - Hvis videnskabsmænd, tidligere og nuværende, var ligeglad med kausalitet 
-         og brugte korrelation til at drage deres konklusioner, hvordan ville 
-         videnskaben være?
+    - I hvilke tilfælde kan denne tankegang benyttes og hvilke
+      kan den ikke?
+        - Kan man benytte de samme marketingstrategier som
+          Google Ads benytter nu udenfor internettets verden?
+    - Hvis videnskabsmænd, tidligere og nuværende, var ligeglad med kausalitet 
+      og brugte korrelation til at drage deres konklusioner, hvordan ville 
+      videnskaben være?
