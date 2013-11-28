@@ -60,3 +60,7 @@
     - Kan man benytte de samme marketingstrategier som
       Google Ads benytter nu udenfor internettets verden.
     - 
+
+- Evt. historisk perspektiv:
+    - Hvordan kommer man videre uden data? - kan man tage
+      højde for det i Anderson's metode.
