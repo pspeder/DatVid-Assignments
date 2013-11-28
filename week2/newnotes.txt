@@ -3,6 +3,7 @@
 ================================================================================
 
 Introduktion af artikel
+=======================
     - Forfatter: Editor in chief på hjemmesiden
     - Oversigt over hovedpunkterne så læseren ved hvor vi skal hen
     - Hvad er en model
@@ -12,6 +13,7 @@ Introduktion af artikel
           forståelse for hvordan data skal bruges.
 
 Redegørelse for artiklens punkter og vores holdning hertil
+==========================================================
     - Modeller
         - Alle modeller er inkorrekte - George Box, og Anderson giver ham ret.
         - Hvorfor har det givet mening at bruge dem?
@@ -40,10 +42,11 @@ Redegørelse for artiklens punkter og vores holdning hertil
 
     - Han er _ikke_ videnskabsmand, han vælger bare at bruge den
       viden vi har tilgængelig.
-
         (vi - der er bekymret om videnskabsteori - synes det er
         vigtigt at vi har vores kildekritik i orden. Det må
         være nærmest umuligt at være selektiv med sine kilder i
         Andersons 'model').
+
 Diskussion
+==========
     - 
