@@ -34,8 +34,8 @@
      være nærmest umuligt at være selektiv med sine kilder i
      Andersons 'model').
 
-- Den datamængde vi har nu gør, at vi kan bruge statiske
-  analyser af dette kæmpe datasæt, istedet for at skulle
+- Den datamængde vi har nu gør, at vi kan bruge statistiske
+  analyser af dette kæmpe datasæt (datamining), istedet for at skulle
   formulere en teori først. Det gør os i stand til at FINDE
   hypoteser/teorier.
 
