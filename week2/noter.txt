@@ -1,0 +1,49 @@
+===========================================================
+                           Notes
+              ================================
+                     The End of Theory
+                     -----------------
+
+- Alle modeller er inkorrekte - George Box, og han giver
+  ham ret.
+  Hvorfor har det givet mening at bruge dem?
+-   Det var dey eneste redskab, vi havde der tilnærmelsesvis
+    besrkev verden på en konsistent måde.
+-   Det står i kontrast til den måde vi nu med vores værktøjer
+    og data kan søge efter mønstre i de data, der beskriver
+    vores omverden - samlet gennem lang tid (bl.a. hos
+    Google).
+
+- Fokus ligger ikke på hvorfor ting gør/er som de er, men
+  bare _at_ de er.
+
+- Han er _ikke_ videnskabsmand, han vælger bare at bruge den
+  viden vi har tilgængelig.
+
+    (vi - der er bekymret om videnskabsteori - synes det er
+     vigtigt at vi har vores kildekritik i orden. Det må
+     være nærmest umuligt at være selektiv med sine kilder).
+
+- Den datamængde vi har nu gør, at vi kan bruge statiske
+  analyser af dette kæmpe datasæt, istedet for at skulle
+  formulere en teori først. Det gør os i stand til at FINDE
+  hypoteser/teorier.
+
+- Vague argumentation:
+   "The Petabyte Age is different because more is different." 
+    Siger at vores store mængde data, gør os i stand til at
+    løse problemer, der ligger udenfor computerverdenens
+    scope. Is this so?
+
+- Seems very fond of Google (Google quality systems).
+
+- Correlation <> Causation
+  Videnskaben siger at:
+  Konklusioner kan ikke drages bare fordi data er
+  korreleret.
+  Hvis ikke vi forsøger at finde kausationen, kan vi ikke
+  drage den normale logiske slutning.
+  Petabytes gør at korrelationen er nok i sig selv til at
+  finde relevante mønstre.
+
+
