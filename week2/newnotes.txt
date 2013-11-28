@@ -13,6 +13,7 @@ Introduktion af artikel
 
 Redegørelse for artiklens punkter og vores holdning hertil
     - Modeller
+        - Alle modeller er inkorrekte - George Box, og Anderson giver ham ret.
         Hvorfor har det givet mening at bruge dem?
         -   Det var det eneste redskab, vi havde der tilnærmelsesvis
             besrkev verden på en konsistent måde.
