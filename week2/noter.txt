@@ -46,4 +46,9 @@
   Petabytes gør at korrelationen er nok i sig selv til at
   finde relevante mønstre.
 
+- Hvordan definerer vi modeller?
 
+- Ved at sige, at videnskabsteorien er ved at uddø, og at
+  den skal ekskluderes fra videnskabelig metode, vil hans
+  forslag ikke forbedre (ved at give videnskabelig metode et
+  ekstra værktøj), men snarere indsnævre den.
