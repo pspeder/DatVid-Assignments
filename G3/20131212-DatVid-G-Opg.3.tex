@@ -40,7 +40,7 @@
 \usepackage{array}                      % To center text in tabular env.
 \usepackage[section]{placeins}          % Create a barrier around floats (quite useful)
 \usepackage{multicol}                  % For making multicolumn as well as single-column format on same page
-%\usepackage{natbib}                     % Include the natbib-BiBTeX library
+\usepackage{natbib}                     % Include the natbib-BiBTeX library
 \usepackage[center,font=small           % Customisation of various caption options
            ,labelfont=bf
            ,textfont=it]{caption}
@@ -50,14 +50,14 @@
                                         %  ``..'' | `..' )
 \usepackage{csquotes}                    % Optional dependency for biblatex - recommended not writing in English
 \usepackage{xpatch}                     % Recommended for biblatex
-\usepackage[backend=biber
-           ,style=alphabetic
-           ,natbib=true
-           ,sorting=ynt
-           ,]{biblatex}
-\usepackage{subfigure}                  % Allow nested figures
+%\usepackage[backend=biber
+%           ,style=alphabetic
+%           ,natbib=true
+%           ,sorting=ynt
+%           ,]{biblatex}
+%\usepackage{subfigure}                  % Allow nested figures
 \usepackage{marginnote}                 % Enable margin notes
-\usepackage{microtype}                  % Prints nicer
+%\usepackage{microtype}                  % Prints nicer
 
 %% Information about package imports.
 %% ==================================
@@ -259,7 +259,7 @@
 \addtolength{\headheight}{\baselineskip}            % Since fancy adds a top
                                                     %  seperator, we add a little
                                                     %  more to the top margin.
-\addbibresource{bib/master.bib}
+%\addbibresource{bib/master.bib}
 %---- title section {{{2 ----%
 \title{% Define a title section (this may be as advanced as you wish (e.g.
         % include a \minipage{} for each author etc. etc). This is what will be
@@ -311,6 +311,7 @@
 %-- END DOCUMENT PROPERTIES }}}1 --%
 
 \begin{document}
+\nocite{*}
 
 \maketitle
 \thispagestyle{empty}
@@ -318,19 +319,17 @@
 
 \frontmatter
 \thispagestyle{psty:toc}
-\microtypesetup{protrusion=false}
 \tableofcontents
-\microtypesetup{protrusion=true}
 \newpage
 
 \mainmatter
-This is clearly discussed in~\textcite{Vinter2001}
 
 %% Introduction
 \include*{src/intro}
+This is clearly discussed in~\cite{Vinter2001}
 
 %% Brødtekst
-\include*{src/body}
+\include*{src/dnacomps}
 
 %% Diskussion
 \include*{src/diskussion}
@@ -343,6 +342,7 @@ This is clearly discussed in~\textcite{Vinter2001}
 
 \newpage
 \backmatter
-\printbibliography
+\bibliography{bib/master}
+\bibliographystyle{alpha}
 
 \end{document}

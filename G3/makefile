@@ -1,6 +1,6 @@
 build:
 	pdflatex -shell-escape -output-directory bin *.tex
-	biber --output_align ./bin/20131212-DatVid-G-Opg.3.bcf
+	bibtex ./bin/20131212-DatVid-G-Opg.3.aux
 	pdflatex -shell-escape -output-directory bin *.tex
 	pdflatex -shell-escape -output-directory bin *.tex
 	make clean
