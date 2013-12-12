@@ -1,12 +1,9 @@
-\documentclass{article}
-\begin{document}
-\section{Introduktion}
-Vi vil i denne opgave beskrive tre forskellige fysiske realiseringer af en computer. Den transistor-baseret computer, den biologiske computer og kvantecomputeren. Vi vil i opgaven komme ind på deres teoretiske muligheder, skrive lidt om deres evne som universel computer og komme med bud på hvad softwaren i computeren kunne være. De tre computere er omtalt i artiklerne { \it Supercomputere - mange bække små} af Brian Vinter (2010), { \it Cramming more components onto smaller circuits} af Gordon Moore (1965), { \it Computing with DNA} af Leonard Adleman (1998) og { \it Quantum computing} af Amit Hagar (2011).
+\section{Kvantecomputere}
 
-\section{Opsummering}
+\subsection{Opsummering}
 Kvantecomputeren er en computer, der gør brug af ideer fra kvanteteori til at lave algoritmer, der er hurtigere end de nuværende algoritmer. Information er gemt i qubits (hagar-2011 pp. 6). Det er en superposition der styrer qubitne. De er repræsenteret som 0 eller 1, men har stadier der ligger imellem 0 og 1. Den kan dog kun måles som 0 eller 1. Før den bliver målt kan man manipulere informationen med gates. Gates bruges til at manipulere information og er repræsenteret med matricer og kan visualiseres som rotationer på en Bloch kugle.
 
-\section{Redegørelse}
+\subsection{Redegørelse}
 Kvantecomputeren kan teoretisk lave de samme beregninger som en Turing-computer, men det vil ikke udnytte dens fulde potentielle. Man kan holde den i et stadie hvor den er i yderpunkterne 0 eller 1, men det der adskiller den fra den nuværende computer, er dens ikke-deterministiske form, som giver den de beregningsmuligheder der muliggør algoritmer, der er hurtigere end de algoritmer vi har nu. Det der gør kvantecomputeren attraktiv er at den kan lave algoritmer i polynolisk tid, hvorimod normale computere ville gøre det i eksponentiel tid. Det der gør kvantecomputeren så meget hurtigere end en almindelig computer er, at den kan udføre den samme operation på alle stadier af et qubit, hvilket giver den større effekt.
 \\
 Kvantecomputeren kan opføre sig deterministisk ligesom de nuværende computere, da alle gates kan laves ud fra en universal gate (hagar-2011 pp. 7). I nuværende computere er det en NAND gate, mens det i en kvantecomputer vil være en CNOT gate for en kvantecomputer. Forskellen ligger i at CNOT gaten er reversibel, det vil sige at den inverse gate også er en kvantegate. Det giver den dens ikke-deterministiske muligheder, som man prøver at udnytte til at lave de eftertragtede algoritmer. 
@@ -15,11 +12,4 @@ Kvantecomputeren er endnu kun en teoretisk model af en computer og der er derfor
 \\
 Kvantecomputeren har været teoretisk i lang tid, men det har ikke været muligt at lave en fysisk model, da den arbejder på et niveau, som er svært at visualisere. Det er en anden grund til at der er så stor fokus på algoritmer, da det er teoretisk arbejde, der ikke kræver simuleringer eller anden fysisk afprøvning. Dog har ren teori ikke været nok til virkelig at forstå mekanismerne bag teorien, hvilket er grunden til at der kun er blevet lavet få algoritmer, der benytter sig af kvantemekanik.
 
-For at få den nødvendige forståelse, så ville man nemmest få den nødvendige forståelse, hvis man kunne bygge en fysisk model og afprøve sine teorier. Det har skabt en situation, hvor teori og praktik går hånd i hånd om at skabe fremskridt indenfor området. Det betyder også at begge områder kræver forskning, da et fokus på kun den ene side ikke vil skabe det nødvendige fremskridt.
-
-\section{Litteraturliste}
-hagar-2011
-
-\section{Konklusion}
-
-\end{document}
+For at få den nødvendige forståelse, så ville man nemmest få den nødvendige forståelse, hvis man kunne bygge en fysisk model og afprøve sine teorier. Det har skabt en situation, hvor teori og praktik går hånd i hånd om at skabe fremskridt indenfor området. Det betyder også at begge områder kræver forskning, da et fokus på kun den ene side ikke vil skabe det nødvendige fremskridt.\cite{hagar2011}
