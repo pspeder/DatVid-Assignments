@@ -6,16 +6,16 @@
                                         %  tex-file.
 \usepackage[T1]{fontenc}                % Encoding of the characters in the
                                         %  output file (pdf)
-\usepackage[danish,english]{babel} % The language(s) used in the document.
+\usepackage[danish]{babel}              % The language(s) used in the document.
                                         %  Used, amongst other things, to let
                                         %  the interpreter know where to split
                                         %  words.
 \usepackage{lmodern}                    % Use the latin modern font when compiling
 \usepackage[tmargin=1in]{geometry}      % Make a top margin of 1 inch
 \usepackage{fancyhdr}                   % Allow for some fancy header/footer stuff
-\usepackage{titlesec}                   % Create a title section (i.e. title page)
+%\usepackage{titlesec}                   % Create a title section (i.e. title page)
 \usepackage{color}                      % We want to be able to define colors.
-\usepackage{cite}                       % To cite/qoute bibtex-entries
+%\usepackage{cite}                       % To cite/qoute bibtex-entries
 \usepackage[pdftex]{graphicx}           % ... and include other graphics than epm.
 %\usepackage[beamer]{graphicx}           % ... and include other graphics than epm.
 \usepackage{lastpage}                   % for finding current page of X pages
@@ -40,16 +40,24 @@
 \usepackage{array}                      % To center text in tabular env.
 \usepackage[section]{placeins}          % Create a barrier around floats (quite useful)
 \usepackage{multicol}                  % For making multicolumn as well as single-column format on same page
-\usepackage[numbers]{natbib}            % Include the natbib-BiBTeX library
+%\usepackage{natbib}                     % Include the natbib-BiBTeX library
 \usepackage[center,font=small           % Customisation of various caption options
            ,labelfont=bf
            ,textfont=it]{caption}
 \usepackage{setspace}                   % Control line spacing (see the Document
                                         %  Properties section for usage)
-%\usepackage{upqoute}                    % Pretty print qoutation marks (using
+\usepackage{upquote}                    % Pretty print qoutation marks (using
                                         %  ``..'' | `..' )
+\usepackage{csquotes}                    % Optional dependency for biblatex - recommended not writing in English
+\usepackage{xpatch}                     % Recommended for biblatex
+\usepackage[backend=biber
+           ,style=alphabetic
+           ,natbib=true
+           ,sorting=ynt
+           ,]{biblatex}
 \usepackage{subfigure}                  % Allow nested figures
 \usepackage{marginnote}                 % Enable margin notes
+\usepackage{microtype}                  % Prints nicer
 
 %% Information about package imports.
 %% ==================================
@@ -61,6 +69,29 @@
 %-- END PACKAGE IMPORTS }}}1 --%
 
 %-- DEFINITIONS {{{1 --% 
+
+%---- page numbering (as with book class) ----% {{{2
+
+%%%%% BORROWED FROM book.cls %%%%%
+\makeatletter
+
+\newif\if@mainmatter \@mainmattertrue
+
+\newcommand\frontmatter{%
+    \cleardoublepage
+    \@mainmatterfalse
+    \pagenumbering{roman}}
+\newcommand\mainmatter{%
+    \cleardoublepage
+    \@mainmattertrue
+    \pagenumbering{arabic}}
+\newcommand\backmatter{%
+    \cleardoublepage
+    \@mainmatterfalse
+    \pagenumbering{roman}}
+\makeatother
+
+%---- end page numbering ----% }}}2
 
 %---- syntax highlighting ----% {{{2
 % Global syntax style {{{3
@@ -181,7 +212,7 @@
     \fancyhf{}
     \fancyhead[R]{\today \\ \leftmark}
     \fancyhead[L]{Paw S. Pedersen \\ Andreas Dall Løfgren \\ Arinbjørn Brandsson}
-    \fancyhead[C]{Datalogiens Videnskab \\ \bfseries Gruppeaflevering 2}
+    \fancyhead[C]{Datalogiens Videnskab \\ \bfseries Gruppeaflevering 3}
         % IDEA: This could be edited to be
         %       a macro displating  the
         %       current (sub)section.
@@ -228,32 +259,43 @@
 \addtolength{\headheight}{\baselineskip}            % Since fancy adds a top
                                                     %  seperator, we add a little
                                                     %  more to the top margin.
+\addbibresource{bib/master.bib}
 %---- title section {{{2 ----%
 \title{% Define a title section (this may be as advanced as you wish (e.g.
         % include a \minipage{} for each author etc. etc). This is what will be
         % output by the \maketitle-command at the beginning of the document section.
+    \centering
     \vspace{2in}
     \LARGE{Datalogiens Videnskabsteori}\\
-    \huge{Gruppeaflevering 2}
+    \huge{Gruppeaflevering 3}
     \author{% List all authors here.
-        \begin{minipage}{0.30\textwidth}
+        \begin{minipage}{0.27\textwidth}
             \centering
             Andreas Dall Løfgren\\
-            \texttt{100992}
+            \begin{tabular}{l l}
+                {\small \bf KU-id:}& {\tt jgc330}\\
+                {\small \bf DOB:}  & {\tt 100992}
+            \end{tabular}
         \end{minipage}
-        \vspace{5pt}
+        \vspace{2pt}
         \and
-        \begin{minipage}{0.30\textwidth}
+        \begin{minipage}{0.27\textwidth}
             \centering
             Paw Saabye Pedersen\\
-            \texttt{110788}
+            \begin{tabular}{l l}
+                {\small \bf KU-id:}& {\tt vwn245}\\
+                {\small \bf DOB:}  & {\tt 110788}
+            \end{tabular}
         \end{minipage}
-        \vspace{5pt}
+        \vspace{2pt}
         \and
-        \begin{minipage}{0.35\textwidth}
+        \begin{minipage}{0.27\textwidth}
             \centering
             Arinbjørn Brandsson\\
-            \texttt{280292}
+            \begin{tabular}{l l}
+                {\small \bf KU-id:}& {\tt abc123}\\
+                {\small \bf DOB:}  & {\tt 280292}
+            \end{tabular}
         \end{minipage}
     }
     \setcounter{page}{0}
@@ -268,35 +310,39 @@
 
 %-- END DOCUMENT PROPERTIES }}}1 --%
 
-%-- DOCUMENT {{{1 --%
 \begin{document}
 
 \maketitle
 \thispagestyle{empty}
 \newpage
 
+\frontmatter
 \thispagestyle{psty:toc}
+\microtypesetup{protrusion=false}
 \tableofcontents
+\microtypesetup{protrusion=true}
 \newpage
 
-\section{Introduktion}
-Denne opgave tager udgangspunk i diskussionen og oplæggene omkring artiklen
-``The End of Theory''\footnote{The End of Theory,\\Forfatter: Chris Anderson\\URL: \url{http://www.wired.com/science/discoveries/magazine/16-07/pb_theory};\\Sidst tilgået: 28/11 - 2013}, såvel som
-i artiklen selv.
+\mainmatter
+This is clearly discussed in~\textcite{Vinter2001}
 
-Vi vil starte med en redegørelse over emnet, teksten og hvad de to beskriver
-som modeller. Vi vil derefter diskutere forskellige synspunkter fra artiklen
-og overveje deres betydning, og vil slutligt konkludere herudfra.
+%% Introduction
+\include*{src/intro}
 
-Hvor relevant er kilder angivet som fodnoter.
+%% Brødtekst
+\include*{src/body}
 
+%% Diskussion
+\include*{src/diskussion}
 
-\include*{src/Body}
+%% Konklusion
+\include*{src/konklusion}
 
-\include*{src/Diskussion}
+%% Perspektivering
+\include*{src/perspek}
 
-\include*{src/Konklusion}
+\newpage
+\backmatter
+\printbibliography
 
 \end{document}
-%-- END DOCUMENT }}}1 --%
-%

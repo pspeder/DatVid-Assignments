@@ -25,11 +25,10 @@
 *.pdf
 *.pdfsync
 *.ps
+*.run.xml
 *.snm
 *.synctex.gz
 *.toc
 *.vrb
 *.xdy
 *.tdo
-*/assignment/
-*/foo
