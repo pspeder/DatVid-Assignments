@@ -1,0 +1,302 @@
+\documentclass[11pt,a4paper,oneside,final]{article}
+
+%-- PACKAGE IMPORTS {{{1 --%
+
+\usepackage[utf8]{inputenc}             % Encoding of the characters in the
+                                        %  tex-file.
+\usepackage[T1]{fontenc}                % Encoding of the characters in the
+                                        %  output file (pdf)
+\usepackage[danish,english]{babel} % The language(s) used in the document.
+                                        %  Used, amongst other things, to let
+                                        %  the interpreter know where to split
+                                        %  words.
+\usepackage{lmodern}                    % Use the latin modern font when compiling
+\usepackage[tmargin=1in]{geometry}      % Make a top margin of 1 inch
+\usepackage{fancyhdr}                   % Allow for some fancy header/footer stuff
+\usepackage{titlesec}                   % Create a title section (i.e. title page)
+\usepackage{color}                      % We want to be able to define colors.
+\usepackage{cite}                       % To cite/qoute bibtex-entries
+\usepackage[pdftex]{graphicx}           % ... and include other graphics than epm.
+%\usepackage[beamer]{graphicx}           % ... and include other graphics than epm.
+\usepackage{lastpage}                   % for finding current page of X pages
+\usepackage{amsmath,amssymb,amsfonts}   % for math and equations
+\usepackage{listings}                   % for syntax highlighting
+\usepackage{verbatim}                   % not entirely sure, though it can also be used for syntax
+\usepackage{pifont}                     % various symbols
+\usepackage{mdwlist}                    % tightly packed lists
+\usepackage{textcomp}                   % for use with upqoting listings
+\usepackage{wasysym}                    % for rel.alg. symbols
+\usepackage{ulem}                       % for underlining
+\usepackage{enumitem}                   % for making different enumerations
+\usepackage{newclude}                   % Disallow \newpage from \includes (including \maketitle)
+\usepackage{fixltx2e}                   % adding some commands not in LaTeX
+                                        %   by default, such as subscript.
+\usepackage[hidelinks]{hyperref}        % makes adding links possible.
+\usepackage[nottoc]{tocbibind}          % for adding links to the TOC
+\usepackage[export]{adjustbox}          % To adjust figures etc. even 
+                                        %  those spanning more than \linewidth
+\usepackage{wrapfig}                    % Wrap text around figures
+\usepackage[super]{nth}                 % Allow superscripted ordinal numerals
+\usepackage{array}                      % To center text in tabular env.
+\usepackage[section]{placeins}          % Create a barrier around floats (quite useful)
+\usepackage{multicol}                  % For making multicolumn as well as single-column format on same page
+\usepackage[numbers]{natbib}            % Include the natbib-BiBTeX library
+\usepackage[center,font=small           % Customisation of various caption options
+           ,labelfont=bf
+           ,textfont=it]{caption}
+\usepackage{setspace}                   % Control line spacing (see the Document
+                                        %  Properties section for usage)
+%\usepackage{upqoute}                    % Pretty print qoutation marks (using
+                                        %  ``..'' | `..' )
+\usepackage{subfigure}                  % Allow nested figures
+\usepackage{marginnote}                 % Enable margin notes
+
+%% Information about package imports.
+%% ==================================
+%% In no way are these packages my own work. All information, ideas, tips and
+%% contact should be directed to the individual author(s), whose information
+%% can be found by searching CTAN (ctan.org).
+%% ==================================
+
+%-- END PACKAGE IMPORTS }}}1 --%
+
+%-- DEFINITIONS {{{1 --% 
+
+%---- syntax highlighting ----% {{{2
+% Global syntax style {{{3
+\lstset{%
+     backgroundcolor=\color{white}      % Should be self-explanatory.
+    ,captionpos=b                       % Position of caption. Can be: t or b
+    ,extendedchars=true                 % Yes, allow for non-ascii chars
+    ,tabsize=4                          % Number of spaces one tab equals.
+    ,aboveskip={1.5\baselineskip}       % The amount of spacing above the listing
+    ,columns=fixed                      % Mono-spaced chars.
+    ,upquote=true                       % Make qoutes look normal and not ,,tex'y''
+    ,deletekeywords={}                  % Make specified keywords not be highlighted
+    ,morekeywords={*}                   % Add additional keywords to be highlighted
+    ,escapeinside={\%*}{*)}             % Put arbitrary tex inside your listing
+                                        %  in the form of: %* <tex code here> *)
+    ,showspaces=false                   % Makes an 'underscore' for each space
+    ,showtabs=false                     % The same for tabs
+    ,showstringspaces=false             % The same, but inside strings
+    ,title=\lstname                     % The default title of a listing.
+                                        %  (see example listings further below)
+    ,xleftmargin=\parindent             % Not strictly necessary: Determines the
+                                        %  offset from the left side of document
+                                        %  (including frames).
+   %,xrightmargin=5em                   % Same as above, only on the right.
+    % Text styles %  -- Determines how the various text elements are formatted.
+    ,basicstyle=\footnotesize
+    ,numberstyle=\tiny\color[rgb]{0.5,0.5,0.5}
+    ,identifierstyle=\ttfamily\color[rgb]{0.49,0.74,0.250}
+    ,keywordstyle=\bfseries\ttfamily\color[rgb]{0,0,1}
+    ,stringstyle=\ttfamily\color[rgb]{0.627,0.126,0.941}
+    ,commentstyle=\textit{\color[rgb]{0,0.6,0}}
+    % Frames %
+    ,frame=single                       % To make a border around your listings.
+                                        %  Possible values:
+                                        %  <none|topline|rightline|bottomline|leftline|lines|single|shadowbox>
+                                        %  or a subset of:
+                                        %  < t|r|b|l|T|R|B|L >
+                                        %  (lower: single line(s) UPPER: double line(s))
+    ,frameround=tftf                    % Round the corners (t=true/f=false) in
+                                        %  following order:
+                                        %  top-right, bottom-right, bottom-left,top-left
+    ,framerule=0.4pt                    % Set to default.
+    ,framesep=3pt                       % Set to default. Distance from frame to
+                                        %  listing.
+    ,rulesep=2pt                        % Set to default. Distance between border lines.
+    ,rulecolor=\color{black}            % 
+    ,rulesepcolor=\color{blue}          % Color between rules (also in shadowboxes)
+    % Line breaks %
+    ,breaklines=true                    % Automatically break long lines
+    ,resetmargins=false                 % Set to default (false). Determines
+                                        %  whether or not indenting from itemised
+                                        %  lists should be ignored.
+    ,prebreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}}
+                                        % Determines what to display on the line
+                                        %  being broken.
+    ,postbreak={}                       % Set to default (nothing). Determines
+                                        %  what to display at the beginning of
+                                        %  the new line after the break.
+    ,breakindent=20pt                   % Set to default (20pt). Determines how
+                                        %  much the broken line should be indented.
+    ,breakautoindent=true               % Automatically determine indentation
+                                        %  based on the previous line(s).
+    % Numbering %
+    ,numbers=left                       % Which side to show line numbers on.
+    ,stepnumber=5                       % At which interval.
+    ,numbersep=5pt                      % Distance from the listing (not border)
+}
+% end global syntax style }}}3
+% Language imports {{{3
+\lstloadlanguages{%
+    % These languages are a compilation of the ones you are most likely
+    % to come in contact with while studying at DIKU. There are, however, a
+    % plethora of other languages. See the listings documentation for a complete
+    % list.
+    % Uncomment only those you need to keep file size and, thus, rendering time
+    % at a minimum.
+%   HTML,
+%   bash,
+%   C,
+%   [Visual]C++,
+%   [ISO]C++,
+%   ML,
+%   PHP,
+%   Pascal,
+%   Python,
+%   [LaTeX]TeX,
+%   XML,
+%   [Visual]Basic,
+%   Haskell,
+%   Java,
+%   make,
+%   Perl,
+%   Prolog,
+%   sh,
+%   SQL,
+%   XSLT
+}
+% end language imports }}}3
+% Language specific listing styles ----% {{{3
+    % You can create custom styles for different parts of your document.
+    % This can be useful if some of your code for instance requires numbering,
+    % while the rest does not.
+\lstdefinestyle{myCstyle}{%
+     language=C
+    ,belowcaptionskip=\baselineskip
+    ,frame=L
+}
+\lstdefinestyle{mySQLstyle}{%
+     language=SQL
+    ,stepnumber=1
+}
+% end language specific listing styles }}}3
+%---- end syntax highlighting }}}2 ----%
+
+%---- fancyhdr styles ----% {{{2 
+
+\fancypagestyle{psty:regular}{%
+    \fancyhf{}
+    \fancyhead[R]{\today \\ \leftmark}
+    \fancyhead[L]{Paw S. Pedersen \\ Andreas Dall Løfgren \\ Arinbjørn Brandsson}
+    \fancyhead[C]{Datalogiens Videnskab \\ \bfseries Gruppeaflevering 2}
+        % IDEA: This could be edited to be
+        %       a macro displating  the
+        %       current (sub)section.
+    % Display a "Page X of y"
+    \fancyfoot[C]{\footnotesize Side \thepage\ af \pageref{LastPage}}
+}
+
+\fancypagestyle{psty:toc}{%
+    \renewcommand{\headheight}{0pt}
+    \renewcommand{\textheight}{620pt}
+    \renewcommand{\footrulewidth}{0pt}
+    \renewcommand{\headrulewidth}{0pt}
+    \fancyhf{}
+    \fancyfoot[C]{\footnotesize Side \thepage\ af \pageref{LastPage}}
+}
+
+%---- }}}2 ----%
+
+%---- macros ----% {{{2
+% These macros are used to declare a piece of text either a "TODO" or "Remark:"
+%  item, marked in red and a shade of grey, respectively, to stand out from the
+%  rest of the document. They can be used like any other latex-command,
+%  i.e.:
+%       \todo{This section will be marked in red so you'll know it should be addressed}
+%       \remark{This will be a shade of grey, so you will remember an idea etc.}
+\newcommand{\todo}[1]{\color{red}\textbf{TODO}\hspace{0.1in}\textit{#1}\color{black}}
+\newcommand{\remark}[1]{\small\color{dark}\textbf{Remark}\hspace{0.1in}\textit{#1}\color{black}\normalsize}
+\newtheorem{theorem}{Theorem}
+\newcommand{\reference}[1]{$^{[#1]}$}
+
+% The next two lines are used in the headers.
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+\renewcommand{\subsectionmark}[1]{\markright{#1}}
+% end macros }}}2
+
+%-- END DEFINITIONS }}}1 --%
+
+%-- DOCUMENT PROPERTIES {{{1 --%
+
+% The options here define the layout of the document.
+\pagestyle{psty:regular}   % There are several 'standard styles' that can be used
+                    %  here, including fancyplain, which is often the one
+                    %  illustrated on various websites.
+\addtolength{\headheight}{\baselineskip}            % Since fancy adds a top
+                                                    %  seperator, we add a little
+                                                    %  more to the top margin.
+%---- title section {{{2 ----%
+\title{% Define a title section (this may be as advanced as you wish (e.g.
+        % include a \minipage{} for each author etc. etc). This is what will be
+        % output by the \maketitle-command at the beginning of the document section.
+    \vspace{2in}
+    \LARGE{Datalogiens Videnskabsteori}\\
+    \huge{Gruppeaflevering 2}
+    \author{% List all authors here.
+        \begin{minipage}{0.30\textwidth}
+            \centering
+            Andreas Dall Løfgren\\
+            \texttt{100992}
+        \end{minipage}
+        \vspace{5pt}
+        \and
+        \begin{minipage}{0.30\textwidth}
+            \centering
+            Paw Saabye Pedersen\\
+            \texttt{110788}
+        \end{minipage}
+        \vspace{5pt}
+        \and
+        \begin{minipage}{0.35\textwidth}
+            \centering
+            Arinbjørn Brandsson\\
+            \texttt{280292}
+        \end{minipage}
+    }
+    \setcounter{page}{0}
+    \date{\today}
+}
+% }}}2
+%---- line spacing {{{2 ----%
+%\singlespacing
+%\onehalfspacing
+%\doublespacing
+%---- end line spacing }}}2 ----%
+
+%-- END DOCUMENT PROPERTIES }}}1 --%
+
+%-- DOCUMENT {{{1 --%
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+\newpage
+
+\thispagestyle{psty:toc}
+\tableofcontents
+\newpage
+
+\section{Introduktion}
+Denne opgave tager udgangspunk i diskussionen og oplæggene omkring artiklen
+``The End of Theory''\footnote{The End of Theory,\\Forfatter: Chris Anderson\\URL: \url{http://www.wired.com/science/discoveries/magazine/16-07/pb_theory};\\Sidst tilgået: 28/11 - 2013}, såvel som
+i artiklen selv.
+
+Vi vil starte med en redegørelse over emnet, teksten og hvad de to beskriver
+som modeller. Vi vil derefter diskutere forskellige synspunkter fra artiklen
+og overveje deres betydning, og vil slutligt konkludere herudfra.
+
+Hvor relevant er kilder angivet som fodnoter.
+
+
+\include*{src/Body}
+
+\include*{src/Diskussion}
+
+\include*{src/Konklusion}
+
+\end{document}
+%-- END DOCUMENT }}}1 --%
+%
